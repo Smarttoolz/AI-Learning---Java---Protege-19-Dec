@@ -6,6 +6,7 @@ package home;
 
 import javax.swing.JOptionPane;
 import others.LoadOntology;
+import others.ReasoningExample;
 
 /**
  *
@@ -17,20 +18,17 @@ public class Home extends javax.swing.JFrame {
      * Creates new form Home
      */
 
-     String discriminantValue = discriminantField.getText();
-                try {
-                    String rootType = ReasoningExample.inferRootType(discriminantValue);
-                    resultLabel.setText("Root Type: " + rootType);
-                } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(OntologySwingApp.this, "Invalid input. Please enter a numeric value.", "Error", JOptionPane.ERROR_MESSAGE);
-                }
+
     public Home() {
         super("Quadratic Equation Intelligence Tutoring System");
         try {
-            LoadOntology.loadOntology("C:\\Users\\Home\\Documents\\AI-Learning---Java---Protege-19-Dec\\QuadraticEquationITS\\src\\home\\QuadraticUpdate.owl");
+            LoadOntology.loadOntology("C:\\Users\\Home\\Documents\\AI-Learning---Java---Protege-19-Dec\\"
+                    + "QuadraticEquationITS\\src\\"
+                    + "home\\QuadraticUpdate.owl");
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Failed to load ontology. Check the file path.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Failed to load ontology."
+                    + "", "Error", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
         }
         initComponents();
@@ -46,7 +44,7 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        valueA = new javax.swing.JTextField();
+        valuea = new javax.swing.JTextField();
         valueB = new javax.swing.JTextField();
         valueC = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -54,23 +52,47 @@ public class Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        discriminantLabel = new javax.swing.JLabel();
+        rootTypeLabel = new javax.swing.JLabel();
+        solutionLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
+        getContentPane().setLayout(null);
+
+        valuea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valueaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valuea);
+        valuea.setBounds(110, 120, 90, 30);
 
         valueB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valueBActionPerformed(evt);
             }
         });
+        getContentPane().add(valueB);
+        valueB.setBounds(110, 170, 90, 30);
+        getContentPane().add(valueC);
+        valueC.setBounds(110, 210, 90, 30);
 
         jLabel1.setText("Value A");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(50, 120, 50, 16);
 
         jLabel2.setText("Value B");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 170, 50, 16);
 
         jLabel3.setText("Value C");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(50, 210, 60, 16);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Input the respective Co-effcient");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(50, 40, 330, 25);
 
         jButton1.setText("Calculate and Learn");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,55 +100,23 @@ public class Home extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(110, 270, 139, 25);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(jLabel3)))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(valueA)
-                                .addComponent(valueC)
-                                .addComponent(valueB, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(154, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel4)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(valueA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(valueB, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(valueC, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(38, 38, 38)
-                .addComponent(jButton1)
-                .addContainerGap(80, Short.MAX_VALUE))
-        );
+        discriminantLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        discriminantLabel.setText("Discriminant: ");
+        getContentPane().add(discriminantLabel);
+        discriminantLabel.setBounds(220, 160, 257, 24);
+
+        rootTypeLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        rootTypeLabel.setText("Root Type: ");
+        getContentPane().add(rootTypeLabel);
+        rootTypeLabel.setBounds(220, 200, 260, 16);
+
+        solutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        solutionLabel.setText("SolutionLabel");
+        getContentPane().add(solutionLabel);
+        solutionLabel.setBounds(220, 230, 330, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,9 +126,59 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_valueBActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+                    
+                 if(!valuea.getText().isEmpty() && !valueB.getText().isEmpty() && !valueC.getText().isEmpty()){
+                    double a = Double.parseDouble(valuea.getText());
+                    double b = Double.parseDouble(valueB.getText());
+                    double c = Double.parseDouble(valueC.getText());
+
+                    // Calculate discriminant
+                    double discriminant = b * b - 4 * a * c;
+
+                    // Infer root type
+                    String rootType = ReasoningExample.inferRootType(String.valueOf(discriminant));
+
+                    // Calculate roots
+                    String solutions;
+                    
+                  if (discriminant > 0) {
+                    double root1 = roundToSignificantFigures((-b + Math.sqrt(discriminant)) / (2 * a), 2);
+                    double root2 = roundToSignificantFigures((-b - Math.sqrt(discriminant)) / (2 * a), 2);
+                    solutions = "Root 1 = " + root1 + ", Root 2 = " + root2;
+
+                } else if (discriminant == 0) {
+                    double root = roundToSignificantFigures(-b / (2 * a), 2);
+                    solutions = "Repeated Root = " + root;
+                } else {
+                    double realPart = roundToSignificantFigures(-b / (2 * a), 2);
+                    double imaginaryPart = roundToSignificantFigures(Math.sqrt(-discriminant) / (2 * a), 2);
+                    solutions = "Root 1 = " + realPart + " + " + imaginaryPart + "i, Root 2 = " + realPart + " - " + imaginaryPart + "i";
+                }
+
+                // Display results
+                discriminantLabel.setText("Discriminant: " + discriminant);
+                rootTypeLabel.setText("Root Type: " + rootType);
+                solutionLabel.setText("Solutions: " + solutions);
+
+                    }else{
+                     JOptionPane.showMessageDialog(Home.this, "Cant Be Empty","Error", JOptionPane.ERROR_MESSAGE);
+                 }
+                // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void valueaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valueaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valueaActionPerformed
+
+    
+    public static double roundToSignificantFigures(double num, int sigFig) {
+    if (num == 0) return 0;
+    final double d = Math.ceil(Math.log10(Math.abs(num))); // Order of magnitude
+    final int power = sigFig - (int) d;
+    final double magnitude = Math.pow(10, power);
+    final long shifted = Math.round(num * magnitude);
+    return shifted / magnitude;
+}
     /**
      * @param args the command line arguments
      */
@@ -175,13 +215,16 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel discriminantLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField valueA;
+    private javax.swing.JLabel rootTypeLabel;
+    private javax.swing.JLabel solutionLabel;
     private javax.swing.JTextField valueB;
     private javax.swing.JTextField valueC;
+    private javax.swing.JTextField valuea;
     // End of variables declaration//GEN-END:variables
 }
