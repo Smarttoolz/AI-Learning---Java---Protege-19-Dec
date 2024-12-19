@@ -22,9 +22,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         super("Quadratic Equation Intelligence Tutoring System");
         try {
-            LoadOntology.loadOntology("C:\\Users\\Home\\Documents\\AI-Learning---Java---Protege-19-Dec\\"
-                    + "QuadraticEquationITS\\src\\"
-                    + "home\\QuadraticUpdate.owl");
+            LoadOntology.loadOntology("C:\\Users\\HP\\Downloads\\AI-Learning---Java---Protege-19-Dec-main\\AI-Learning---Java---Protege-19-Dec-main\\QuadraticEquationITS\\src\\home\\QuadraticUpdate.owl");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Failed to load ontology."
@@ -63,11 +61,15 @@ public class Home extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 0));
+        setPreferredSize(new java.awt.Dimension(785, 675));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         valuea.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +117,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(20, 430, 140, 25);
+        jButton1.setBounds(20, 430, 140, 23);
 
         discriminantLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         discriminantLabel.setText("Discriminant: ");
@@ -125,16 +127,16 @@ public class Home extends javax.swing.JFrame {
         rootTypeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rootTypeLabel.setText("Root Type: ");
         getContentPane().add(rootTypeLabel);
-        rootTypeLabel.setBounds(230, 350, 300, 20);
+        rootTypeLabel.setBounds(230, 350, 490, 20);
 
-        solutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        solutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         getContentPane().add(solutionLabel);
-        solutionLabel.setBounds(180, 426, 440, 30);
+        solutionLabel.setBounds(170, 430, 440, 30);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("To solve a Quadratic Equation. You need to provide your co-efficient Values");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 10, 640, 25);
+        jLabel5.setBounds(10, 10, 610, 40);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel6.setText("Step2 - Calculate Discriminant");
@@ -156,7 +158,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(90, 300, 90, 25);
+        jButton2.setBounds(90, 300, 90, 23);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 470, 760, 10);
 
@@ -173,6 +175,10 @@ public class Home extends javax.swing.JFrame {
         jLabel10.setText("Ontology loaded: OntologyID(OntologyIRI(<http://www.semanticweb.org/home/ontologies/2024/11/quadratic_equation>))");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(10, 530, 740, 20);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2024-12-19 013113.png"))); // NOI18N
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(490, 10, 280, 150);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -302,6 +308,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
