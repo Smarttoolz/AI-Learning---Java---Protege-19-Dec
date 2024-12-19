@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/home/ontologies/2024/11/quadratic_equation"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/home/ontologies/2024/11/quadratic_equation">
+    <Prefix name="" IRI="http://www.semanticweb.org/home/ontologies/2024/11/quadratic_equation"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an Ontology to solve Quadratic Equation</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual IRI="#Coefficient3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#discriminant3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coefficient1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#discriminant1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RepeatedRoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Factoring1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuadraticFormula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComplexRoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuadraticEquation1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCoefficientA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCoefficientC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Factoring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#discriminant2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coefficient2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoefficient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Discriminant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#determinesRootType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolutionMethod"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RepeatedRoot1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuadraticEquation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RealRoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#realRoot1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComplexRoot1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuadraticEquation2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coefficient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Root"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCoefficientB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompletingTheSquare"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CompletingTheSquare"/>
+        <Class IRI="#SolutionMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComplexRoot"/>
+        <Class IRI="#Root"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Factoring"/>
+        <Class IRI="#SolutionMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuadraticFormula"/>
+        <Class IRI="#SolutionMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RealRoot"/>
+        <Class IRI="#Root"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RepeatedRoot"/>
+        <Class IRI="#Root"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Coefficient"/>
+        <NamedIndividual IRI="#Coefficient1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Coefficient"/>
+        <NamedIndividual IRI="#Coefficient2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Coefficient"/>
+        <NamedIndividual IRI="#Coefficient3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ComplexRoot"/>
+        <NamedIndividual IRI="#ComplexRoot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Root"/>
+        <NamedIndividual IRI="#ComplexRoot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Factoring"/>
+        <NamedIndividual IRI="#Factoring1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SolutionMethod"/>
+        <NamedIndividual IRI="#Factoring1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuadraticEquation"/>
+        <NamedIndividual IRI="#QuadraticEquation1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuadraticEquation"/>
+        <NamedIndividual IRI="#QuadraticEquation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuadraticEquation"/>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RepeatedRoot"/>
+        <NamedIndividual IRI="#RepeatedRoot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Root"/>
+        <NamedIndividual IRI="#RepeatedRoot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discriminant"/>
+        <NamedIndividual IRI="#discriminant1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discriminant"/>
+        <NamedIndividual IRI="#discriminant2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discriminant"/>
+        <NamedIndividual IRI="#discriminant3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RealRoot"/>
+        <NamedIndividual IRI="#realRoot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Root"/>
+        <NamedIndividual IRI="#realRoot1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCoefficient"/>
+        <NamedIndividual IRI="#QuadraticEquation1"/>
+        <NamedIndividual IRI="#Coefficient1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+        <NamedIndividual IRI="#QuadraticEquation1"/>
+        <NamedIndividual IRI="#discriminant1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesMethod"/>
+        <NamedIndividual IRI="#QuadraticEquation1"/>
+        <NamedIndividual IRI="#Factoring1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCoefficient"/>
+        <NamedIndividual IRI="#QuadraticEquation2"/>
+        <NamedIndividual IRI="#Coefficient2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+        <NamedIndividual IRI="#QuadraticEquation2"/>
+        <NamedIndividual IRI="#discriminant2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesMethod"/>
+        <NamedIndividual IRI="#QuadraticEquation2"/>
+        <NamedIndividual IRI="#Factoring1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCoefficient"/>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
+        <NamedIndividual IRI="#Coefficient3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
+        <NamedIndividual IRI="#discriminant3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesMethod"/>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
+        <NamedIndividual IRI="#Factoring1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#determinesRootType"/>
+        <NamedIndividual IRI="#discriminant1"/>
+        <NamedIndividual IRI="#realRoot1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#determinesRootType"/>
+        <NamedIndividual IRI="#discriminant2"/>
+        <NamedIndividual IRI="#RepeatedRoot1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#determinesRootType"/>
+        <NamedIndividual IRI="#discriminant3"/>
+        <NamedIndividual IRI="#ComplexRoot1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientA"/>
+        <NamedIndividual IRI="#Coefficient1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientB"/>
+        <NamedIndividual IRI="#Coefficient1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientC"/>
+        <NamedIndividual IRI="#Coefficient1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientA"/>
+        <NamedIndividual IRI="#Coefficient2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientB"/>
+        <NamedIndividual IRI="#Coefficient2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-4.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientC"/>
+        <NamedIndividual IRI="#Coefficient2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">4.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientA"/>
+        <NamedIndividual IRI="#Coefficient3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientB"/>
+        <NamedIndividual IRI="#Coefficient3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCoefficientC"/>
+        <NamedIndividual IRI="#Coefficient3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+        <NamedIndividual IRI="#discriminant1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+        <NamedIndividual IRI="#discriminant2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+        <NamedIndividual IRI="#discriminant3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-3.0</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#determinesRootType"/>
+        <Class IRI="#Discriminant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoefficient"/>
+        <Class IRI="#QuadraticEquation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+        <Class IRI="#QuadraticEquation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usesMethod"/>
+        <Class IRI="#QuadraticEquation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#determinesRootType"/>
+        <Class IRI="#Root"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoefficient"/>
+        <Class IRI="#Coefficient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDiscriminant"/>
+        <Class IRI="#Discriminant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usesMethod"/>
+        <Class IRI="#SolutionMethod"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCoefficientA"/>
+        <Class IRI="#Coefficient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCoefficientB"/>
+        <Class IRI="#Coefficient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCoefficientC"/>
+        <Class IRI="#Coefficient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+        <Class IRI="#Discriminant"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCoefficientA"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCoefficientB"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCoefficientC"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDiscriminantValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rule2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Discriminant"/>
+                <Variable IRI="d"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDiscriminantValue"/>
+                <Variable IRI="d"/>
+                <Variable IRI="value"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="value"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#determinesRootType"/>
+                <Variable IRI="d"/>
+                <NamedIndividual IRI="#RepeatedRoot1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rule1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Discriminant"/>
+                <Variable IRI="d"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDiscriminantValue"/>
+                <Variable IRI="d"/>
+                <Variable IRI="value"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="value"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#determinesRootType"/>
+                <Variable IRI="d"/>
+                <NamedIndividual IRI="#realRoot1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rule3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Discriminant"/>
+                <Variable IRI="d"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasDiscriminantValue"/>
+                <Variable IRI="d"/>
+                <Variable IRI="value"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="value"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#determinesRootType"/>
+                <Variable IRI="d"/>
+                <NamedIndividual IRI="#ComplexRoot1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rule4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#QuadraticEquation"/>
+                <Variable IRI="eq"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientA"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="a"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientB"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="b"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientC"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="c"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#multiply">
+                <Variable IRI="bSquared"/>
+                <Variable IRI="b"/>
+                <Variable IRI="b"/>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#multiply">
+                <Variable IRI="fourAC"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">4</Literal>
+                <Variable IRI="a"/>
+                <Variable IRI="c"/>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#subtract">
+                <Variable IRI="d"/>
+                <Variable IRI="bSquared"/>
+                <Variable IRI="fourAC"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasDiscriminant"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="d"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Coefficient</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a, b, c in the equation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Discriminant</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formula Δ = b² - 4ac, used to classify the equation&apos;s roots.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#QuadraticEquation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents the equation ax² + bx + c = 0.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Root</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Solutions to the equation, determined by the discriminant value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#determinesRootType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a discriminant to the type of roots (real or complex).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#discriminant1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Calculate the discriminant manually: b2−4ac=(−3) 2−4(1)(2)=1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoefficient</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a quadratic equation to its coefficients (a, b, c).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoefficientA</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents coefficient &apos;A&apos; in a quadratic equation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoefficientB</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents coefficient &apos;B&apos; in a quadratic equation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoefficientC</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents coefficient &apos;C&apos; in a quadratic equation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDiscriminant</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a quadratic equation to its discriminant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDiscriminantValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents the discriminat value in a quadratic equation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#usesMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a quadratic equation to the method used to solve it.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
