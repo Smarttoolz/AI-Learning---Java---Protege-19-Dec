@@ -55,6 +55,17 @@ public class Home extends javax.swing.JFrame {
         discriminantLabel = new javax.swing.JLabel();
         rootTypeLabel = new javax.swing.JLabel();
         solutionLabel = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -65,7 +76,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
         getContentPane().add(valuea);
-        valuea.setBounds(110, 120, 90, 30);
+        valuea.setBounds(90, 100, 90, 30);
 
         valueB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,50 +84,103 @@ public class Home extends javax.swing.JFrame {
             }
         });
         getContentPane().add(valueB);
-        valueB.setBounds(110, 170, 90, 30);
+        valueB.setBounds(90, 150, 90, 30);
         getContentPane().add(valueC);
-        valueC.setBounds(110, 210, 90, 30);
+        valueC.setBounds(90, 200, 90, 30);
 
         jLabel1.setText("Value A");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(50, 120, 50, 16);
+        jLabel1.setBounds(20, 110, 50, 16);
 
         jLabel2.setText("Value B");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 170, 50, 16);
+        jLabel2.setBounds(20, 150, 50, 16);
 
         jLabel3.setText("Value C");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 210, 60, 16);
+        jLabel3.setBounds(20, 200, 60, 16);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setText("Input the respective Co-effcient");
+        jLabel4.setText("to calculate your discriminant");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 40, 330, 25);
+        jLabel4.setBounds(190, 300, 260, 25);
 
-        jButton1.setText("Calculate and Learn");
+        jButton1.setBackground(new java.awt.Color(0, 153, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Final Result");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(110, 270, 139, 25);
+        jButton1.setBounds(20, 430, 140, 25);
 
-        discriminantLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        discriminantLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         discriminantLabel.setText("Discriminant: ");
         getContentPane().add(discriminantLabel);
-        discriminantLabel.setBounds(220, 160, 257, 24);
+        discriminantLabel.setBounds(20, 350, 180, 24);
 
-        rootTypeLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        rootTypeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         rootTypeLabel.setText("Root Type: ");
         getContentPane().add(rootTypeLabel);
-        rootTypeLabel.setBounds(220, 200, 260, 16);
+        rootTypeLabel.setBounds(230, 350, 300, 20);
 
-        solutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        solutionLabel.setText("SolutionLabel");
+        solutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(solutionLabel);
-        solutionLabel.setBounds(220, 230, 330, 16);
+        solutionLabel.setBounds(180, 426, 440, 30);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setText("To solve a Quadratic Equation. You need to provide your co-efficient Values");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(10, 10, 640, 25);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel6.setText("Step2 - Calculate Discriminant");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(20, 250, 330, 26);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setText("Click");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(20, 300, 60, 25);
+
+        jButton2.setBackground(new java.awt.Color(0, 153, 102));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Submit");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(90, 300, 90, 25);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 470, 760, 10);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel8.setText("Step1 - Enter Co-efficient Respectively");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(20, 60, 370, 26);
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel9.setText("Step2 - Calculate Quadratic Equation");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(20, 390, 340, 26);
+
+        jLabel10.setText("Ontology loaded: OntologyID(OntologyIRI(<http://www.semanticweb.org/home/ontologies/2024/11/quadratic_equation>))");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(10, 530, 740, 20);
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,7 +200,7 @@ public class Home extends javax.swing.JFrame {
                     double discriminant = b * b - 4 * a * c;
 
                     // Infer root type
-                    String rootType = ReasoningExample.inferRootType(String.valueOf(discriminant));
+                    String rootType = ReasoningExample.inferAndCheckRoot(String.valueOf(discriminant),a,b,c);
 
                     // Calculate roots
                     String solutions;
@@ -156,8 +220,7 @@ public class Home extends javax.swing.JFrame {
                 }
 
                 // Display results
-                discriminantLabel.setText("Discriminant: " + discriminant);
-                rootTypeLabel.setText("Root Type: " + rootType);
+                
                 solutionLabel.setText("Solutions: " + solutions);
 
                     }else{
@@ -169,6 +232,25 @@ public class Home extends javax.swing.JFrame {
     private void valueaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valueaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_valueaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+  if(!valuea.getText().isEmpty() && !valueB.getText().isEmpty() && !valueC.getText().isEmpty()){
+                    double a = Double.parseDouble(valuea.getText());
+                    double b = Double.parseDouble(valueB.getText());
+                    double c = Double.parseDouble(valueC.getText());
+
+                    // Calculate discriminant
+                    double discriminant = b * b - 4 * a * c;
+
+                    // Infer root type
+                    String rootType = ReasoningExample.inferAndCheckRoot(String.valueOf(discriminant),a,b,c);
+                    discriminantLabel.setText("Discriminant: " + discriminant);
+                rootTypeLabel.setText("Root Type: " + rootType);
+  }
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     public static double roundToSignificantFigures(double num, int sigFig) {
@@ -217,10 +299,21 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel discriminantLabel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel rootTypeLabel;
     private javax.swing.JLabel solutionLabel;
     private javax.swing.JTextField valueB;

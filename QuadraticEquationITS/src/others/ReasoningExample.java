@@ -15,7 +15,7 @@ import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
 public class ReasoningExample {
 
-    public static String inferAndCheckRootType(String discriminantValue, double a, double b, double c) {
+    public static String inferAndCheckRoot(String discriminantValue, double a, double b, double c) {
     try {
         // Load the ontology
         OWLOntology ontology = LoadOntology.getOntology();
@@ -37,22 +37,22 @@ public class ReasoningExample {
         }
 
         // Determine the root type based on the discriminant
-        OWLNamedIndividual rootTypeIndividual;
+        OWLNamedIndividual inferredRoot;
         if (calculatedDiscriminant > 0) {
-            rootTypeIndividual = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#RealRoot"));
+            inferredRoot = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#realRoot1"));
         } else if (calculatedDiscriminant == 0) {
-            rootTypeIndividual = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#RepeatedRoot"));
+            inferredRoot = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#RepeatedRoot1"));
         } else {
-            rootTypeIndividual = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#ComplexRoot"));
+            inferredRoot = dataFactory.getOWLNamedIndividual(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#ComplexRoot1"));
         }
 
-        // Verify correctness of inferred root type with ontology
-        if (reasoner.isEntailed(dataFactory.getOWLClassAssertionAxiom(
-                dataFactory.getOWLClass(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#RootType")), 
-                rootTypeIndividual))) {
-            return "Correct: " + rootTypeIndividual.getIRI().getShortForm() + " inferred successfully.";
+        // Verify if the inferred root type is consistent with the ontology
+        OWLClass rootClass = dataFactory.getOWLClass(IRI.create(ontology.getOntologyID().getOntologyIRI() + "#Root"));
+        if (reasoner.isEntailed(dataFactory.getOWLClassAssertionAxiom(rootClass, inferredRoot))) {
+            return "Inferred Result: " + inferredRoot.getIRI().getShortForm();
         } else {
-            return "Error: Root type inference failed or inconsistent with ontology.";
+            return "Error: Root inference failed";
+            
         }
 
     } catch (Exception e) {
@@ -60,5 +60,6 @@ public class ReasoningExample {
         return "Error inferring root type";
     }
 }
+
 
 }
