@@ -23,19 +23,19 @@
         <NamedIndividual IRI="#discriminant3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#discriminant1"/>
+        <NamedIndividual IRI="#Coefficient1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Coefficient1"/>
+        <NamedIndividual IRI="#discriminant1"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDiscriminantValue"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuadraticEquation3"/>
+        <Class IRI="#RepeatedRoot"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RepeatedRoot"/>
+        <NamedIndividual IRI="#QuadraticEquation3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Factoring1"/>
@@ -496,6 +496,64 @@
                 <ObjectProperty IRI="#determinesRootType"/>
                 <Variable IRI="d"/>
                 <NamedIndividual IRI="#ComplexRoot1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rule4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#QuadraticEquation"/>
+                <Variable IRI="eq"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientA"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="a"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientB"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="b"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasCoefficientC"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="c"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#multiply">
+                <Variable IRI="bSquared"/>
+                <Variable IRI="b"/>
+                <Variable IRI="b"/>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#multiply">
+                <Variable IRI="fourAC"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">4</Literal>
+                <Variable IRI="a"/>
+                <Variable IRI="c"/>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#subtract">
+                <Variable IRI="d"/>
+                <Variable IRI="bSquared"/>
+                <Variable IRI="fourAC"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasDiscriminant"/>
+                <Variable IRI="eq"/>
+                <Variable IRI="d"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
